@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Tic Tac Toe | X O</title>
+	<title>Tic Tac Toe</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatibility" content="ie=edge">
+
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-<h1>Tic Tac Toe</h1>
+<div class="message-container hidden">
+	<h2 class="message__header"></h2>
+	<p class="message__text"></p>
+	<button class="play-again">Play Again</button>
+</div>
+
+<div class="container">
+	<div class="col-md-1-4 scoreboard-section">
+		<section class= "scoreboard-container">
+			<h1 class="scoreboard__header">Scoreboard</h1>
+			<div class="players-container">
+				<div class="player player-1">
+					<h2 class="player__header">Player 1</h2>
+					<p class="score">0</p>
+				</div>
+				<div class="player player-2">
+					<h2 class="player__header">Player 2</h2>
+					<p class="score">0</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="col-md-3-4 gameboard-section">
+		<section class="gameboard-container">
+			<h2 class="gameboard__header">Tic Tac Toe</h2>
+			<div class="gameboard">
+				<div class="piece"></div>
+				<div class="piece"></div>
+				<div class="piece"></div>
+
+				<div class="piece"></div>
+				<div class="piece"></div>
+				<div class="piece"></div>
+
+				<div class="piece"></div>
+				<div class="piece"></div>
+				<div class="piece"></div>
+			</div>
+		</section>
+	</div>
+</div>
 
 <script type="text/javascript" src="scripts.js"></script>
 </body>

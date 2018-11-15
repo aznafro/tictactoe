@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+[class$="__header"] {
+	font-family: "Allerta Stencil", sans-serif;
+	font-weight: normal;
+}
+
+.piece,
+.score {
+	font-family: "Indie Flower", sans-serif;
+}
+
+/**********************************
+
+		CONTAINERS AND LAYOUT 
+
+**********************************/
+
+.container {
+	width: 95%;
+	max-width: 1120px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.gameboard-container,
+.scoreboard-container {
+	padding: 15px;
+	border-radius: 5px;
+	border: 1px solid black;
+	height: 100%;
+}
+
+.scoreboard-section {
+	height: 30vh;
+}
+
+.gameboard-section {
+	height: 70vh;
+}
+
+.gameboard-container,
+.players-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gameboard-container {
+	flex-direction: column;
+}
+
+[class^="col-"] {
+	padding: 15px;
+}
+
+/*********************************
+
+		PLAYERS SECTION
+
+*********************************/
+
+.player__header {
+	padding-bottom: 3px;
+	border-bottom: 2px solid #222;
+	margin-bottom: 7px;
+}
+
+.score {
+	text-align: center;
+	font-size: 50px;
+	line-height: 40px;
+}
+
+.scoreboard__header {
+	margin-bottom: 15px;
+}
+
+/*********************************
+
+		GAMEBOARD SECTION
+
+*********************************/
+.gameboard__header {
+	text-align: center;
+	font-size: 48px;
+}
+
+.gameboard {
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	height: 80%;
+	margin: 0 auto;
+}
+
+.piece {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33.33%;
+	height: 33.33%;
+
+	font-size: 88px;
+}
+
+.piece:hover {
+	cursor: pointer;
+}
+
+.piece:nth-child(1),
+.piece:nth-child(2),
+.piece:nth-child(3) {
+	border-bottom: 3px solid black;
+}
+
+.piece:nth-child(2),
+.piece:nth-child(5),
+.piece:nth-child(8) {
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+}
+
+.piece:nth-child(7),
+.piece:nth-child(8),
+.piece:nth-child(9) {
+	border-top: 3px solid black;
+}
+
+/*********************************
+
+		MESSAGE BOARD
+
+*********************************/
+.message-container {
+	width: 370px;
+	padding: 30px;
+	border-radius: 5px;
+	border: 10px solid black;
+	background-color: #fff;
+	z-index: 2;
+	text-align: center;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.message__header {
+	margin-bottom: 15px;
+	font-size: 42px;
+}
+
+.message__text {
+	margin-bottom: 20px;
+	font-size: 32px;
+}
+
+.play-again {
+	border: none;
+	padding: 13px 30px;
+	font-size: 20px;
+	background-color: steelblue;
+	color: white;
+	border-radius: 5px;
+}
+
+.play-again:hover {
+	cursor: pointer;
+}
+
+/*********************************
+
+		HELPER CLASSES
+
+*********************************/
+.hidden {
+	display: none;
+}
+
+.blur {
+	filter: blur(2px);
+}
+
+/*********************************
+
+			MEDIA QUERIES
+
+*********************************/
+@media only screen and (min-width: 768px) {
+	.container {
+		flex-direction: row;
+	}
+
+	.gameboard-container {
+		justify-content: space-around;
+		height: 95vh;
+	}
+
+	.scoreboard-section {
+		height: 35vh;
+	}
+
+	.col-md-1-4 {
+		width: 25%;
+	}
+
+	.col-md-3-4 {
+		width: 75%;
+	}
+
+	.gameboard-section {
+		order: -1;
+	}
+}
