@@ -129,7 +129,12 @@ function Piece(piece) {
 			let piece = pieces[i];
 
 			piece.addEventListener("click", function() {
-				let success = gameboard[i].setMarker(player1Turn ? "X" : "O");
+
+				let success = false;
+				if(!gameOver()) {
+					success = gameboard[i].setMarker(player1Turn ? "X" : "O");
+				}
+
 				if(success) {
 					// someone won
 					if(gameOver()) {
